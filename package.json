@@ -39,6 +39,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@clerk/clerk-js": "^5.43.4",
 		"@inlang/paraglide-sveltekit": "^0.11.1",
 		"@tabler/icons-svelte": "^3.26.0",
 		"@zag-js/avatar": "^0.78.3",
