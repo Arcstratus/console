@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Clerk } from '@clerk/types';
+	import type { Snippet } from 'svelte';
 	import Button from '$lib/components/button/button.svelte';
 	import { clerk } from '../store';
 
-	const { children } = $props();
+	const { children }: { children?: Snippet } = $props();
 
 	const signOut = (clerk: Clerk) => {
 		clerk.signOut();

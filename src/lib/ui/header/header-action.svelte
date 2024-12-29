@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SignOutButton from '$lib/clerk/unstyled/sign-out-button.svelte';
 	import { onMount } from 'svelte';
 
 	let inputElement: HTMLInputElement;
@@ -21,4 +22,5 @@
 
 <div class="middle hidden gap-4 md:flex">
 	<input bind:this={inputElement} type="text" placeholder="Search" class="rounded px-2" />
+	<SignOutButton />
 </div>

@@ -42,7 +42,7 @@
 </script>
 
 {#if $clerk && !$clerk.user}
-	<Button onclick={() => signIn($clerk)}>
+	<Button onclick={() => signIn($clerk)} class="w-full">
 		{#if children}
 			{@render children()}
 		{:else}
