@@ -1,17 +1,6 @@
-import { ToastProvider } from "@/components/ui/toast";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ArcStratus - Dashboard",
@@ -25,10 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
-      >
-        <ToastProvider>{children}</ToastProvider>
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased">
+        {children}
+        <Toaster />
       </body>
     </html>
   );
